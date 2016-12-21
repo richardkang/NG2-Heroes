@@ -1,0 +1,76 @@
+<h1>{{title}}</h1>
+<img src="{{imgSrc}}" />
+<img [src]="imgSrc" />
+<br>
+<span class="area" [class.isSpecial]="true">Ng class test</span>
+<span class="area" [ngClass]="'isSpecial'">ngClass test</span>
+<span class="area" [style.color]="'red'">Ng Style test</span>
+<span class="area" [ngStyle]="{'color':'red'}">ngStyle</span>
+<br>
+<button (click)="onClick($event)">Alert</button>
+<input (keyup)="getInputValue($event)" placeholder="Input some text and see console" />
+<h4>Example Form</h4>
+<div class="form-group">
+    <div class="square" [style.background-color]="bgColor">Change Color</div>
+    <br>
+    <div class="input-group">
+        <label class="sr-only" for="name">Name</label>
+        <div class="input-group-addon">C</div>
+        <input class="form-control" name="name" required [(ngModel)]="bgColor" placeholder="Input some color" />
+    </div>
+</div>
+<br>
+
+<div class="btn-group" role="group" aria-label="bootstrap menu">
+    <button type="button" class="btn btn-default">default</button>
+    <button type="button" class="btn btn-primary">primary</button>
+    <button type="button" class="btn btn-secondary">secondary</button>
+    <button type="button" class="btn btn-success">success</button>
+    <button type="button" class="btn btn-info">info</button>
+    <button type="button" class="btn btn-warning">warning</button>
+    <button type="button" class="btn btn-danger">danger</button>
+
+
+</div>
+<hr>
+
+
+ <ngb-dropdown class="btn-group">
+        <button ngb-dropdown-toggle class="btn btn-success" type="button">
+            Toggle dropdown
+        </button>
+        <div class="dropdown-menu">
+            <a href class="dropdown-item" *ngFor="let menu of dropdownMenu">
+          {{menu.text}}
+        </a>
+        </div>
+</ngb-dropdown>
+
+<ngb-dropdown class="btn-group">
+  <button type="button" class="btn btn-danger">Action</button>
+  <button type="button" class="btn btn-danger" ngb-dropdown-toggle>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</ngb-dropdown>
+
+
+    <div class="btn-group dropdown open">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"    aria-expanded="false">
+        Dropdown
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <button class="dropdown-item" type="button">Action</button>
+        <button class="dropdown-item" type="button">Another action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+
+<br>
+
